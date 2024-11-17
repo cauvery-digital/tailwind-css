@@ -1,8 +1,9 @@
 
-Install Tailwind via npm
+## Install Tailwind via npm
 For most projects (and to take advantage of Tailwind’s customization features), you’ll want to install Tailwind and its peer-dependencies via npm.
 
 https://tailwindcss.com/docs/installation
+
 npm init
 npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
 
@@ -12,14 +13,16 @@ npx tailwindcss init
 Configure your template paths
 Add the paths to all of your template files in your tailwind.config.js file.
 
+```
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+module.exports = { 
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {},
   },
   plugins: [],
 }
+```
 
 Add the Tailwind directives to your CSS
 Add the @tailwind directives for each of Tailwind’s layers to your main CSS file.
@@ -35,7 +38,7 @@ npx tailwindcss -i ./src/input.css -o ./public/assets/css/output.css --watch
 
 Start using Tailwind in your HTML
 Add your compiled CSS file to the <head> and start using Tailwind’s utility classes to style your content.
-
+```
 <!doctype html>
 <html>
 <head>
@@ -49,3 +52,4 @@ Add your compiled CSS file to the <head> and start using Tailwind’s utility cl
   </h1>
 </body>
 </html>
+```
